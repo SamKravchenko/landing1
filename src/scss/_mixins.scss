@@ -1,0 +1,10 @@
+@mixin zero-indent {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin posts-title-param-sm {
+    font-weight: 700;
+    font-size: 14px;
+    color: $accentCol;
+}

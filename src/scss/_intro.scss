@@ -1,0 +1,13 @@
+.intro {
+    padding-top: 23px;
+    &__img {
+        width: 100%;
+    }
+
+    @media (min-width: $screen-md) {
+        padding-top: 28px;
+    }
+    @media (min-width: $screen-lg) {
+        padding-top: 34px;
+    }
+}

@@ -1,0 +1,11 @@
+.page-body {
+    min-width: $screen-sm;
+    overflow-x: hidden;
+}
+
+.container {
+    min-width: $screen-sm;
+    max-width: $screen-xl;
+    margin: auto;
+    padding: 0px 25px;
+}

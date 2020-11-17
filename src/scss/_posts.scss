@@ -1,0 +1,91 @@
+.posts {
+    margin: auto;
+    font-family: $roboto-font;
+    padding-top: 38px;
+    padding-bottom: 45px;
+
+    &__title{
+        @include posts-title-param-sm;
+        margin: 0;
+        line-height: 22px;
+        text-transform: uppercase;
+
+        @media (min-width: $screen-md) {
+            font-size: 16px;
+        }
+    }
+
+    @media (min-width: $screen-md) {
+        padding-bottom: 60px;
+    }
+    @media (min-width: $screen-lg) {
+        padding-bottom: 70px;
+    }
+}
+
+.cards {
+    @include zero-indent;
+    &__item{
+        margin-top: 25px;
+
+        @media (min-width: $screen-md) {
+            display: flex;
+        }
+        @media (min-width: $screen-lg) {
+            flex-basis: 50%;
+            padding-right: 25px;
+        }
+        @media (min-width: $screen-xl) {
+            padding-right: 0;
+        }
+    }
+    &__item:not(:nth-child(-n+3)){
+        display: none;
+
+        @media (min-width: $screen-md) {
+            display: flex;
+        }
+    }
+    &__text-content {
+        @media (min-width: $screen-md) {
+            margin-left: 20px;
+        }
+    }
+    &__title{
+        margin: 10px 0 0;
+        @include posts-title-param-sm;
+        line-height: 30px;
+
+        @media (min-width: $screen-md) {
+            font-size: 16px;
+            margin: 0;
+        }
+    }
+    &__subtitle{
+        margin: 0;
+        font-size: 11px;
+        line-height: 20px;
+        color: #7C7C7C;
+
+        @media (min-width: $screen-md) {
+            font-size: 12px;
+        }
+    }
+    &__desc {
+        display: none;
+        margin: 0;
+        font-size: 14px;
+        line-height: 26px;
+        color: #5C5C5C;
+        margin-top: 15px;
+        @media (min-width: $screen-md) {
+            display: block;
+        }
+    }
+
+    @media (min-width: $screen-lg) {
+        max-height: 355px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

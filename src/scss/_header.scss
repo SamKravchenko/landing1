@@ -1,0 +1,74 @@
+.header {
+    font-family: $roboto-font;
+    padding-top: 23px;
+    @media (min-width: $screen-lg) {
+        padding-top: 30px;
+    }
+}
+.menu {
+    max-width: 100%;
+    position: relative;
+
+    &__list {
+        @include zero-indent;
+        width: 182px;
+        height: 208px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        transition: opacity .7s;
+        background-color: #F5F5F5;
+        position: absolute;
+        right: 0px;
+        opacity: 0;
+
+        @media (min-width: $screen-md) {
+            width: 100%;
+            height: 55px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0;
+            opacity: 1;
+            background-color: $whiteCol;
+            position: static;
+        }
+    }
+
+    &__item {
+        padding-left: 13px;
+
+        @media (min-width: $screen-md) {
+            margin-right: 34px;
+            padding-left: 0;
+        }
+        @media (min-width: $screen-lg) {
+            margin-right: 68px;
+        }
+    }
+
+    &__item:hover {
+        background-color: #E5E5E5;
+
+        @media (min-width: $screen-md) {
+            background-color: $whiteCol;
+        }
+    }
+
+    &__link {
+        font-size: 11px;
+        line-height: 22px;
+        color: $accentCol;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+    }
+
+    &__link:hover {
+        color: #57A4A4;
+        transition: color $trans-time;
+    }
+
+    &--active {
+        opacity: 1;
+    }
+}

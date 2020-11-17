@@ -1,0 +1,66 @@
+.footer {
+    min-width: $screen-sm;
+    background-color: $blackCol;
+    text-align: center;
+    font-family: $roboto-font;
+    font-size: 14px;
+    color: #B9B9B9;
+    padding-top: 38px;
+    padding-bottom: 45px;
+    &__title {
+        margin: 0;
+        font-weight: 700;
+        line-height: 22px;
+        color: #FEFEFE;
+        text-transform: uppercase;
+
+
+    }
+    &__text {
+        margin: 8px 0 0;
+        font-size: 12px;
+        line-height: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+
+        @media (min-width: $screen-md) {
+            font-size: 16px;
+            line-height: 28px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    &__text--addition {
+        display: none;
+        @media (min-width: $screen-md) {
+            display: inline;
+        }
+    }
+    &__contacts {
+        margin: 25px 0 0;
+        line-height: 24px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    @media (min-width: $screen-md) {
+        font-size: 16px;
+        padding-top: 57px;
+        padding-bottom: 55px;
+    }
+    @media (min-width: $screen-lg) {
+        padding-top: 66px;
+        padding-bottom: 70px;
+    }
+}
+
+.refer {
+    @include zero-indent;
+    margin-top: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__item {
+        margin-right: 6px;
+    }
+}

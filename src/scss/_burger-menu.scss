@@ -1,0 +1,65 @@
+.burger {
+    width: 44px;
+    height: 37px;
+    background-color: $blackCol;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    &__icon {
+        width: 17px;
+        height: 2px;
+        background-color: #fff;
+        position: relative;
+    }
+    &__icon::before {
+        content: "";
+        display: block;
+        width: 17px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: -4px;
+        transition: transform $trans-time ease-in, top $trans-time linear $trans-time;
+    }
+    &__icon::after {
+        content: "";
+        display: block;
+        width: 17px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 4px;
+        transition: transform $trans-time ease-in, top $trans-time linear .2s;
+    }
+    &__icon::after {
+        content: "";
+        display: block;
+        width: 17px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 4px;
+        transition: transform $trans-time ease-in, top $trans-time linear .2s;
+    }
+    &__icon--active {
+        background-color: transparent;
+    }
+    &__icon--active::before {
+        transform: rotate(45deg);
+        top: 0;
+        transition: top .2s linear, transform $trans-time ease-in $trans-time;
+    }
+    &__icon--active::after {
+        transform: rotate(-45deg);
+        top: 0;
+        transition: top $trans-time linear, transform $trans-time ease-in $trans-time;
+    }
+
+    @media (min-width: $screen-md) {
+        display: none;
+    }
+}
